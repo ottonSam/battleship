@@ -26,33 +26,29 @@ public class Board {
                 this.celulas.add(new Celula(x, y));
             }
         }
-        Boolean adicionaCorveta = true;
-        while (adicionaCorveta) {
+        while (navios.size() < 1) {
             Direcao direcaoCorveta = Direcao.values()[gerador.nextInt(4)];
             Integer x = gerador.nextInt(10);
             Integer y = gerador.nextInt(10);
-            adicionaCorveta = !posicionarNavio(x, y, new Corveta(direcaoCorveta), direcaoCorveta);
+            posicionarNavio(x, y, new Corveta(direcaoCorveta), direcaoCorveta);
         }
-        Boolean adicionaDestroyer = true;
-        while (adicionaDestroyer) {
+        while (navios.size() < 2) {
             Direcao direcaoDestroyer = Direcao.values()[gerador.nextInt(4)];
             Integer x = gerador.nextInt(10);
             Integer y = gerador.nextInt(10);
-            adicionaDestroyer = !posicionarNavio(x, y, new Destroyer(direcaoDestroyer), direcaoDestroyer);
+            posicionarNavio(x, y, new Destroyer(direcaoDestroyer), direcaoDestroyer);
         }
-        Boolean adicionaFragata = true;
-        while (adicionaFragata) {
+        while (navios.size() < 3) {
             Direcao direcaoFragata = Direcao.values()[gerador.nextInt(4)];
             Integer x = gerador.nextInt(10);
             Integer y = gerador.nextInt(10);
-            adicionaFragata = !posicionarNavio(x, y, new Fragata(direcaoFragata), direcaoFragata);
+            posicionarNavio(x, y, new Fragata(direcaoFragata), direcaoFragata);
         }
-        Boolean adicionaSubmarino = true;
-        while (adicionaSubmarino) {
+        while (navios.size() < 4) {
             Direcao direcaoSubmarino = Direcao.values()[gerador.nextInt(4)];
             Integer x = gerador.nextInt(10);
             Integer y = gerador.nextInt(10);
-            adicionaSubmarino = !posicionarNavio(x, y, new Submarino(direcaoSubmarino), direcaoSubmarino);
+            posicionarNavio(x, y, new Submarino(direcaoSubmarino), direcaoSubmarino);
         }
     }
 
@@ -116,7 +112,7 @@ public class Board {
      * @param y A coordenada y da célula
      * @return A célula com as coordenadas especificadas, ou null se não encontrada
      */
-    private Celula getCelula(Integer x, Integer y) {
+    public Celula getCelula(Integer x, Integer y) {
         for (Celula celula : celulas) {
             if (celula.getX().equals(x) && celula.getY().equals(y)) {
                 return celula;
@@ -135,7 +131,6 @@ public class Board {
      */
     public boolean posicionarNavio(Integer x, Integer y, Navio navio, Direcao direcao) {
         ArrayList<Celula> auxCelulas = new ArrayList<>();
-        limparPosicoes(navio);
         if (direcao.equals(Direcao.CIMA) && y > navio.getTamanho()) {
             for (Integer i = 0; i < navio.getTamanho(); i++) {
                 auxCelulas.add(getCelula(x, y-i));
@@ -156,17 +151,18 @@ public class Board {
             }
         }
         for (Navio auxNavio: navios) {
-            if (!auxNavio.equals(navio)) {
-                for (Celula celula: auxNavio.getCelulas()) {
-                    if (auxCelulas.contains(celula)) {
-                        return false;
-                    }
+            for (Celula celula: auxNavio.getCelulas()) {
+                if (auxCelulas.contains(celula)) {
+                    return false;
                 }
             }
         }
         navio.setCelulas(auxCelulas);
         marcarPosicooes(navio);
-        return false;
+        if (navio.getCelulas().size() > 0) {
+            navios.add(navio);
+        }
+        return true;
     }
 
     /**
@@ -182,7 +178,7 @@ public class Board {
             }
         }
         for (Navio navio : navios) {
-            if (navio.aindaFlutua()) {
+            if (!navio.aindaFlutua()) {
                 return false;
             }
         }
@@ -197,9 +193,11 @@ public class Board {
         Random gerador = new Random();
         Integer x = gerador.nextInt(10);
         Integer y = gerador.nextInt(10);
-        while (!(Objects.requireNonNull(getCelula(x, y)).getAtingido())) {
+        Celula celula = getCelula(x, y);
+        while (celula.getAtingido()) {
             x = gerador.nextInt(10);
             y = gerador.nextInt(10);
+            celula = getCelula(x, y);
         }
         return marcarCelula(x, y);
     }

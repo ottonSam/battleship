@@ -1,5 +1,6 @@
 package br.ufrn.imd;
 
+import br.ufrn.imd.modelo.Jogo;
 import br.ufrn.imd.visao.TelaPrincipal;
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -14,6 +15,7 @@ import javafx.stage.Stage;
  */
 public class Main {
     public static void main(String[] args) {
-        TelaPrincipal.launch(args);
+        Jogo jogo = new Jogo();
+        System.out.println(jogo.getBoardJogador());
     }
 }

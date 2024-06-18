@@ -6,16 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="298bcdf6-1e26-460f-ae6e-277915feb1ea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Corveta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Corveta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Destroyer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Destroyer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Fragata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Fragata.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Jogador.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Jogo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Navio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Navio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Submarino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Submarino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/visao/TelaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/visao/TelaPrincipal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/TelaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/TelaPrincipal.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,34 +63,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.TelaPrincipal.executor": "Run",
-    "Maven.battleship [clean,install].executor": "Run",
-    "Maven.battleship [clean,javafx:run].executor": "Run",
-    "Maven.battleship [clean].executor": "Run",
-    "Maven.battleship [compile].executor": "Run",
-    "Maven.battleship [install\\].executor": "Run",
-    "Maven.battleship [install].executor": "Run",
-    "Maven.battleship [package].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/controlesBot",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/home/ottonsam/Git/battleship/src/main/java/br/ufrn/imd/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TelaPrincipal.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.battleship [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.battleship [clean,javafx:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.battleship [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.battleship [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.battleship [install\\].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.battleship [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.battleship [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/controlesBot&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/ottonsam/Git/battleship/src/main/java/br/ufrn/imd/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />

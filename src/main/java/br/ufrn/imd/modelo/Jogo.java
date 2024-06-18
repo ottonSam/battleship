@@ -37,10 +37,47 @@ public class Jogo {
      * @param y A coordenada y da jogada
      */
     public void marcarCelulaBot(Integer x, Integer y) {
-        if (bot.marcarCelula(x, y)) {
-            this.vitorias++;
-            this.jogador = new Board();
-            this.bot = new Board();
+        Celula celula = bot.getCelula(x, y);
+        if (!celula.getAtingido()) {
+            if (bot.marcarCelula(x, y)) {
+                this.vitorias++;
+                this.jogador = new Board();
+                this.bot = new Board();
+            } else {
+                marcarCelulaJogador();
+            }
         }
+    }
+
+    /**
+     * Obtém o tabuleiro do jogador.
+     * @return O tabuleiro do jogador (Board)
+     */
+    public Board getBoardJogador() {
+        return this.jogador;
+    }
+
+    /**
+     * Obtém o tabuleiro do bot.
+     * @return O tabuleiro do bot (Board)
+     */
+    public Board getBoardBot() {
+        return this.bot;
+    }
+
+    /**
+     * Obtém a quantidade de vitórias.
+     * @return A quantidade de vitórias (Integer)
+     */
+    public Integer getVitorias() {
+        return vitorias;
+    }
+
+    /**
+     * Obtém a quantidade de derrotas.
+     * @return A quantidade de derrotas (Integer)
+     */
+    public Integer getDerrotas() {
+        return derrotas;
     }
 }

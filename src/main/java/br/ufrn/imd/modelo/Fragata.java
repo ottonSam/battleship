@@ -7,13 +7,12 @@ import java.util.ArrayList;
  * @version 1.0
  */
 public class Fragata extends Navio {
-    public static final int TAMANHO = 4;
-
     /**
      * O construtor da classe Fragata.
      * @param auxDirecao A direção do Navio
      */
     public Fragata( Direcao auxDirecao){
         setDirecao(auxDirecao);
+        setTamanho(4);
     }
 }
