@@ -5,55 +5,42 @@ package br.ufrn.imd.modelo;
  * @version 1.0
  */
 public class Jogo {
-    private Jogador jogador1;
-    private Jogador jogador2;
-    private Jogador vencedor;
+    private Board jogador;
+    private Board bot;
+    private Integer vitorias;
+    private Integer derrotas;
 
     /**
      * O construtor da classe Jogo.
-     * @param jogador1 O primeiro jogador
-     * @param jogador2 O segundo jogador
      */
-    public Jogo(Jogador jogador1, Jogador jogador2) {
-        this.jogador1 = jogador1;
-        this.jogador2 = jogador2;
+    public Jogo() {
+        this.jogador = new Board();
+        this.bot = new Board();
+        this.vitorias = 0;
+        this.derrotas = 0;
     }
 
     /**
-     * Marca a jogada do jogador 1 nas coordenadas especificadas.
-     * @param x A coordenada x da jogada
-     * @param y A coordenada y da jogada
+     * Marca a jogada em uma célula aleatória inda não atingida no tabuleiro do jogador.
      */
-    public void marcarJogador1(Integer x, Integer y) {
-        if (jogador1.getBoard().marcarCelula(x, y)) {
-            this.vencedor  = jogador2;
+    public void marcarCelulaJogador() {
+        if (jogador.marcarCelulaAleatoria()) {
+            this.derrotas++;
+            this.jogador = new Board();
+            this.bot = new Board();
         }
     }
 
     /**
-     * Marca a jogada do jogador 2 nas coordenadas especificadas.
+     * Marca a jogada no tabuleiro do bot nas coordenadas especificadas.
      * @param x A coordenada x da jogada
      * @param y A coordenada y da jogada
      */
-    public void marcarJogador2(Integer x, Integer y) {
-        if (jogador2.getBoard().marcarCelula(x, y)) {
-            this.vencedor  = jogador1;
+    public void marcarCelulaBot(Integer x, Integer y) {
+        if (bot.marcarCelula(x, y)) {
+            this.vitorias++;
+            this.jogador = new Board();
+            this.bot = new Board();
         }
-    }
-
-    /**
-     * Verifica se o jogo ainda está ativo (sem vencedor definido).
-     * @return true se o jogo ainda está ativo, false caso contrário
-     */
-    public Boolean jogoAtivo() {
-        return this.vencedor == jogador1 || this.vencedor == jogador2;
-    }
-
-    /**
-     * Obtém o jogador vencedor do jogo.
-     * @return O jogador vencedor do jogo
-     */
-    public Jogador getVencedor() {
-        return vencedor;
     }
 }

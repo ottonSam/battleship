@@ -1,6 +1,8 @@
 package br.ufrn.imd.modelo;
 
 import java.util.ArrayList;
+import java.util.Objects;
+import java.util.Random;
 
 /**
  * A classe Board representa o tabuleiro de jogo para o jogo de batalha naval.
@@ -13,12 +15,44 @@ public class Board {
     /**
      * O construtor da classe Board.
      * Inicializa as células no tabuleiro.
+     * Posiciona os Navios aleatóriamente no tabuleiro.
      */
     public Board() {
+
+        Random gerador = new Random();
+
         for (Integer x = (Integer) 0; x < 10; x++) {
             for (int y = 0; y < 10; y++) {
                 this.celulas.add(new Celula(x, y));
             }
+        }
+        Boolean adicionaCorveta = true;
+        while (adicionaCorveta) {
+            Direcao direcaoCorveta = Direcao.values()[gerador.nextInt(4)];
+            Integer x = gerador.nextInt(10);
+            Integer y = gerador.nextInt(10);
+            adicionaCorveta = !posicionarNavio(x, y, new Corveta(direcaoCorveta), direcaoCorveta);
+        }
+        Boolean adicionaDestroyer = true;
+        while (adicionaDestroyer) {
+            Direcao direcaoDestroyer = Direcao.values()[gerador.nextInt(4)];
+            Integer x = gerador.nextInt(10);
+            Integer y = gerador.nextInt(10);
+            adicionaDestroyer = !posicionarNavio(x, y, new Destroyer(direcaoDestroyer), direcaoDestroyer);
+        }
+        Boolean adicionaFragata = true;
+        while (adicionaFragata) {
+            Direcao direcaoFragata = Direcao.values()[gerador.nextInt(4)];
+            Integer x = gerador.nextInt(10);
+            Integer y = gerador.nextInt(10);
+            adicionaFragata = !posicionarNavio(x, y, new Fragata(direcaoFragata), direcaoFragata);
+        }
+        Boolean adicionaSubmarino = true;
+        while (adicionaSubmarino) {
+            Direcao direcaoSubmarino = Direcao.values()[gerador.nextInt(4)];
+            Integer x = gerador.nextInt(10);
+            Integer y = gerador.nextInt(10);
+            adicionaSubmarino = !posicionarNavio(x, y, new Submarino(direcaoSubmarino), direcaoSubmarino);
         }
     }
 
@@ -153,5 +187,20 @@ public class Board {
             }
         }
         return true;
+    }
+
+    /**
+     * Marca uma célula no aleatória ainda não marcada no tabuleiro como atingida e verifica se todos os navios foram afundados.
+     * @return true se todos os navios foram afundados, false caso contrário
+     */
+    public Boolean marcarCelulaAleatoria() {
+        Random gerador = new Random();
+        Integer x = gerador.nextInt(10);
+        Integer y = gerador.nextInt(10);
+        while (!(Objects.requireNonNull(getCelula(x, y)).getAtingido())) {
+            x = gerador.nextInt(10);
+            y = gerador.nextInt(10);
+        }
+        return marcarCelula(x, y);
     }
 }

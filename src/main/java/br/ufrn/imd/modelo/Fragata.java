@@ -11,9 +11,9 @@ public class Fragata extends Navio {
 
     /**
      * O construtor da classe Fragata.
-     * @param auxCelulas As células que compõem a fragata
+     * @param auxDirecao A direção do Navio
      */
-    public Fragata(ArrayList<Celula> auxCelulas){
-        setCelulas(auxCelulas);
+    public Fragata( Direcao auxDirecao){
+        setDirecao(auxDirecao);
     }
 }

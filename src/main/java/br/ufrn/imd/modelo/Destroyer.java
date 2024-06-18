@@ -11,9 +11,9 @@ public class Destroyer extends Navio {
 
     /**
      * O construtor da classe Destroyer.
-     * @param auxCelulas As células que compõem o destroyer
+     * @param auxDirecao A direção do Navio
      */
-    public Destroyer(ArrayList<Celula> auxCelulas){
-        setCelulas(auxCelulas);
+    public Destroyer( Direcao auxDirecao){
+        setDirecao(auxDirecao);
     }
 }

@@ -11,9 +11,9 @@ public class Corveta extends Navio {
 
     /**
      * O construtor da classe Corveta.
-     * @param auxCelulas As células que compõem a corveta
+     * @param auxDirecao A direção do Navio
      */
-    public Corveta(ArrayList<Celula> auxCelulas){
-        setCelulas(auxCelulas);
+    public Corveta(Direcao auxDirecao){
+        setDirecao(auxDirecao);
     }
 }

@@ -7,9 +7,9 @@ import java.util.ArrayList;
  * @version 1.0
  */
 public abstract class Navio {
-    private ArrayList<Celula> celulas;
+    private ArrayList<Celula> celulas = new ArrayList<>();
     private Boolean afundado = false;
-    private Direcao direcao = Direcao.CIMA;
+    private Direcao direcao;
     private Integer tamanho;
 
     /**

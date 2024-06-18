@@ -11,9 +11,9 @@ public class Submarino extends Navio {
 
     /**
      * O construtor da classe Submarino.
-     * @param auxCelulas As células que compõem o submarino
+     * @param auxDirecao A direção do Navio
      */
-    public Submarino(ArrayList<Celula> auxCelulas) {
-        setCelulas(auxCelulas);
+    public Submarino( Direcao auxDirecao){
+        setDirecao(auxDirecao);
     }
 }
