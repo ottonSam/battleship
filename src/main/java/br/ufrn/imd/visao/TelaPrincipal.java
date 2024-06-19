@@ -1,7 +1,7 @@
 package br.ufrn.imd.visao;
 
 import br.ufrn.imd.modelo.Celula;
-import br.ufrn.imd.modelo.Jogo;
+import br.ufrn.imd.controle.Jogo;
 import br.ufrn.imd.modelo.Tipo;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;

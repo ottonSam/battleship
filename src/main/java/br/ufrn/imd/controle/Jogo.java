@@ -1,4 +1,7 @@
-package br.ufrn.imd.modelo;
+package br.ufrn.imd.controle;
+
+import br.ufrn.imd.modelo.Board;
+import br.ufrn.imd.modelo.Celula;
 
 /**
  * A classe Jogo representa um jogo de batalha naval entre dois jogadores.
