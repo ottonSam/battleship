@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="298bcdf6-1e26-460f-ae6e-277915feb1ea" name="Changes" comment="integrando controles com interface">
-      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/modelo/Jogo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/controle/Jogo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/visao/TelaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufrn/imd/visao/TelaPrincipal.java" afterDir="false" />
-    </list>
+    <list default="true" id="298bcdf6-1e26-460f-ae6e-277915feb1ea" name="Changes" comment="integrando controles com interface" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/interfaceGrafica" />
+        <entry key="$PROJECT_DIR$" value="documentacao" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,7 +65,7 @@
     "Maven.battleship [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature/controlesBot",
+    "git-widget-placeholder": "documentacao",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/ottonsam/Documentos/javafx-sdk-22.0.1/lib/javafx.fxml.jar",
     "node.js.detected.package.eslint": "true",
@@ -127,14 +120,6 @@
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
