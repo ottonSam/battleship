@@ -8,3 +8,5 @@ Ubuntu: siga o passo a passo (https://www.digitalocean.com/community/tutorials/i
 Compilando e executando o projeto
 Compilação: Em seu terminal no diretório raiz do projeto execute o seguinte comando (mvn install)
 Execução: Em seu terminal no diretório raiz do projeto execute o seguinte comando (mvn javafx:run)
+
+Os arquivos .class e .fxml serão gerados no diretório /target, caso o diretório não exista ele será criado.
